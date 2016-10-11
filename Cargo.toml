@@ -1,0 +1,6 @@
+[package]
+name = "San Diego Rust"
+version = "0.1.0"
+authors = ["Xavier Lange <xrlange@tureus.com>"]
+
+[dependencies]
