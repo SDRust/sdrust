@@ -29,7 +29,7 @@
 //!
 //! <h2>Anonymous Report</h2>
 //!
-//! You can make an anonymous report here [Wufoo form or similar that DOES NOT require an email address to submit. <http://www.wufoo.com/>]
+//! You can make an anonymous report here this [Wufoo form that DOES NOT require an email address to submit](https://sdrust.wufoo.com/forms/sdrust-anonymous-report/).
 //!
 //! We can't follow up an anonymous report with you directly, but we will fully investigate it and take whatever action is necessary to prevent a recurrence.
 //!
