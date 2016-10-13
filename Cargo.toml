@@ -1,5 +1,5 @@
 [package]
-name = "San Diego Rust"
+name = "san_diego_rust"
 version = "0.1.0"
 authors = ["Xavier Lange <xrlange@tureus.com>"]
 

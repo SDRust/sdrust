@@ -19,9 +19,11 @@
 //!
 //! 
 
+#![allow(dead_code)]
+
 pub mod code_of_conduct;
 
-mod Oct_11_2016 {
+mod oct_11_2016 {
 	pub fn meetup(){
 	}	
 }
