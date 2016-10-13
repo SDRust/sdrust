@@ -1,9 +1,20 @@
 language: rust
 rust:
-  - stable
-  - beta
-  - nightly
+- stable
+- beta
+- nightly
 matrix:
   allow_failures:
-    - rust: nightly
+  - rust: nightly
 sudo: false
+before_deploy: cargo doc
+deploy:
+  provider: s3
+  access_key_id: AKIAJJWDR6TPBQ6S7GZQ
+  secret_access_key:
+    secure: i6chXBP/LCAzL9Cgh3uW0Hdjpza/KX1nzHSp9Wbd2SG8L+j57SGTnc5vaGqtK1ZE2xKanWPrrjukz7JtzW1moms/5saDnqHDPUezpX2Jf/++1n8D7VKuxbZ2OfMXQ6oyJPcWBtBOnOjPcsAYbvch5q+X55FekM/PYt/aQQiL/OuDY06SWZerH7mxcnlH3cTAE3CbRvuNeCm+9HMn0ccI9GykpsB0pOXVFmwBRFfDWpxeinbXtcIuMN/u38AgXboS3aOAwttbGe85hFKJdvnZZiLWLicBG0OrZ0zGWFl4rbbqbnACCaiCZ5XAWMJPC57g54ti5389KxX376bWBAjGTSJTJMYKksXSR7kTpLssEB91t1yCIGcNHk4XORD5oMV4ImdQbgTPQK5YjS75QDmEqsgvylt+a7LlpvafbkSyOHMjguJQ8QoF0X8LbUoT8HeGt4czmsrTshvYTVFLIQV1BDkQSuTvg2aK2AW2HWL3Bykg/jyf+iJPCjxP0f+DR94mbafxLS+qNg9Rg8BRti1elkoGGGc53/g94jqTK9u2CdTFIZdsN28qDqIb3rPzjVR6X8HkHa0iD9N8rDVe1dY2ktnRTUc2ic1kHSZ8QsoelD1r6L5z1TCYx/TFbmxO+XLNU5+ioSmmWAd8YmAY3XdzmKJwYli5TfqHLxoeJJuOp9w=
+  bucket: sdrust.org
+  local-dir: target/doc/
+  acl: public_read
+  on:
+    repo: SDRust/sdrust
