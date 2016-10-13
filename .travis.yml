@@ -16,5 +16,6 @@ deploy:
   bucket: sdrust.org
   local-dir: target/doc/
   acl: public_read
+  skip_cleanup: true
   on:
     repo: SDRust/sdrust
